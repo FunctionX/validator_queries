@@ -1,0 +1,7 @@
+{
+    "validator_info":["fxcored","q","staking","validators","--node=https://fx-json.functionx.io:26657"],
+    "create_val":["fxcored","q","txs","--events","message.action=create_validator","--node=https://fx-json.functionx.io:26657","--limit=100"],
+    "val_withdrawals":["fxcored","q","txs","--events","msg","--node=https://fx-json.functionx.io:26657"],
+    "val_outstanding_comms":["fxcored","q","distribution","commission","val","--node=https://fx-json.functionx.io:26657"],
+    "delegator_rewards":["fxcored","q","distribution","rewards","wallet","--node=https://fx-json.functionx.io:26657"]
+}
