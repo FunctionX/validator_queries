@@ -10,4 +10,4 @@ structure of the reports (if you want to plug in other reports):
 3. Data.py module is where all the various data is generated from. And also where data is being manipulated
 4. the Report class in Report.py is where the blueprint of a report object is stored. it will be initialized with REPORT_NAME, file_type, data and other information
 5. index.py is where Report objects are being initialized and run
-6. all you have to do is run index.py to generate the reports
+6. all you have to do is run python3 index.py to generate the reports
