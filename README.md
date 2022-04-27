@@ -1,8 +1,9 @@
 to run this script:
 1. have python3 installed
 2. install requirements by running the following commands: pip install requirements.txt
-3. run the command to generate the reports: python3 index.py
-4. oh did i mention you also need to have fxcore CLI installed
+3. run fxcored config output json 
+4. run the command to generate the reports: python3 index.py
+5. oh did i mention you also need to have fxcore CLI installed
 
 structure of the reports (if you want to plug in other reports):
 1. add in the fxcore CLI command in the "cmd_list.json" file as per the template
