@@ -83,7 +83,7 @@ def _get_val_outstanding_delegated_rewards():
         values.append((wallet_address,rewards))
     return values
 
-_get_val_outstanding_delegated_rewards()
+# _get_val_outstanding_delegated_rewards()
 
 
 def _get_all_val_withdrawals():
