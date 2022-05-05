@@ -78,12 +78,14 @@ def _get_val_outstanding_delegated_rewards():
         
         rewards_data=Cmd._get_raw_data(cmd)
         if len(rewards_data["rewards"])>0:
-            rewards=float(rewards_data["total"][0]["amount"])/10**18
+            try:
+                rewards=float(rewards_data["total"][0]["amount"])/10**18
+            except IndexError as error:
+                rewards=0
         else:
-            commission=0
+            rewards=0
         values.append((wallet_address,rewards))
     return values
-
 
 
 def _get_all_val_withdrawals():

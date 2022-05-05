@@ -14,7 +14,7 @@ def _generate_file_name(report_name:str):
     return file_name
 
 def _write_to_json(data:list,file_name):
-    with open(filename, 'w') as file_object:  #open the file in write mode
+    with open(file_name, 'w') as file_object:  #open the file in write mode
         json.dump(data, file_object)   # json.dump() function to stores the set of numbers in numbers.json file
 
 def _write_to_csv(data:list,file_name,columns=[]):
