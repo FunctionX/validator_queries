@@ -142,13 +142,18 @@ def _get_all_val_withdrawals():
                             if attribute["key"]=='amount':
                                 withdrawals[tx["height"]]["withdraw_rewards"]=attribute['value']
                     if event["type"]=="withdraw_commission":
-                        withdrawals[tx["height"]]["withdraw_commission"]=event["attributes"][0]["value"]
+                        if len(event["attributes"][0])<2:
+                            withdrawals[tx["height"]]["withdraw_commission"]="0FX"
+                        else:
+                            withdrawals[tx["height"]]["withdraw_commission"]=event["attributes"][0]["value"]
                     else:
                         pass
 
         val_withdrawals[val]=withdrawals
         all_val_withdrawals.append(val_withdrawals)
     return all_val_withdrawals
+
+_get_all_val_withdrawals()
 
 def _manipulate_val_w(all_val_withdrawals:dict):
     all_withdrawals=all_val_withdrawals
