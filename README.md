@@ -12,3 +12,15 @@ structure of the reports (if you want to plug in other reports):
 4. the Report class in Report.py is where the blueprint of a report object is stored. it will be initialized with REPORT_NAME, file_type, data and other information
 5. index.py is where Report objects are being initialized and run
 6. all you have to do is run python3 index.py to generate the reports
+
+the csv file columns
+1. Address: validator address
+2. Moniker: validator name
+3. Wallet_Address: account used to create the validator
+4. Outstanding_Commission: unwithdrawn commission for the validators (the commission that was earned from transactions and block rewards NOT including self-delegated rewards)
+5. Outstanding_rewards: unwithdrawn self-delegated rewards
+6. Withdrawn_commission: total cumulated commission that have been withdrawn (so this will be the sum of all that was withdrawn for each validator)
+7. Withdrawn_rewards: total cumulated rewards that have been withdrawn
+8. Accumulated commission: Outstanding_Commission + Withdrawn_commission
+9. Accumulated rewards: Outstanding_rewards + Withdrawn_rewards
+10. Total: Accumulated commission + accumulated rewards

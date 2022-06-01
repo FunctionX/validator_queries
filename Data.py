@@ -269,11 +269,11 @@ def combine_val_rewards_entry():
 
 def val_earnings_w_sum_columns():
     validator_earnings=combine_val_rewards_entry()
-    validator_earnings_columns=['address','wallet_address','moniker',"oustanding_commisison","outstanding_rewards","withdrawn_commission","withdrawn_rewards"]
+    validator_earnings_columns=['address','wallet_address','moniker',"outstanding_commission","outstanding_rewards","withdrawn_commission","withdrawn_rewards"]
     df0 = pd.DataFrame(validator_earnings,columns=validator_earnings_columns)
     df1=df0.fillna(0)
     
-    df1["accumulated_commission"]=df1["oustanding_commisison"]+df1["withdrawn_commission"]
+    df1["accumulated_commission"]=df1["outstanding_commission"]+df1["withdrawn_commission"]
     df1["accumulated_rewards"]=df1["outstanding_rewards"]+df1["withdrawn_rewards"]
 
     df1["total"]=df1["accumulated_commission"]+df1["accumulated_rewards"]
